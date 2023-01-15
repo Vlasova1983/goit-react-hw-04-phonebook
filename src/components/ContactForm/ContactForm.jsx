@@ -1,8 +1,8 @@
 import {useState} from "react";
- import { PropTypes } from 'prop-types';
- import styles  from '../ContactForm/ContactForm.module.css';
+import { PropTypes } from 'prop-types';
+import styles  from '../ContactForm/ContactForm.module.css';
 
- export const ContactForm =({onSubmit})=> { 
+export const ContactForm =({onSubmit})=> { 
   
   const [name,setInName] = useState(''); 
   const [number,setInNumber] = useState('');
