@@ -14,7 +14,7 @@ export const ContactList = ({contacts,onDelete}) => {
   };
 
 ContactList.propTypes = {       
-    contacts: PropTypes.arrayOf( PropTypes.shape()),
+    contacts: PropTypes.arrayOf(PropTypes.shape()),
     onDelete:PropTypes.func
 }
     
