@@ -7,14 +7,10 @@ import styles  from './App.module.css';
 
 
 export const App  =()=> {
-  
-  const [contacts,setInContacts] = useState([]);
   const [filter,setInFilter] = useState('');
-
-  useEffect(()=>{     
-    const contacts = JSON.parse(localStorage.getItem('contacts'));      
-    setInContacts(contacts);       
-  },[]);
+  const [contacts,setInContacts] = useState(()=>{
+    return JSON.parse(localStorage.getItem('contacts')) || [];
+  });  
 
   useEffect(()=>{      
     localStorage.setItem('contacts', JSON.stringify(contacts));          
